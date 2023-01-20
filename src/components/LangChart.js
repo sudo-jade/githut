@@ -130,6 +130,8 @@ export default function LangChart(props) {
             yAxis: {
                 ...state.yAxis,
                 title: { text: isMobile ? "" : title },
+                type: 'logarithmic',
+                minorTickInterval: 0.1,
             },
             series: createSeriesPercentage(data, top),
             xAxis: { tickLength: 0, categories: categories() },
